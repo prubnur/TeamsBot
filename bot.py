@@ -23,7 +23,7 @@ def joinmeeting(url, duration, teamsid, teamspass):
     })
 
     driver = webdriver.Chrome(options=opt,
-                              executable_path=r"C:\\Users\\isaluja1811\\PycharmProjects\\TeamsBot\\drivers\\chromedriver.exe")
+                              executable_path="chromedriver.exe")
 
     driver.set_page_load_timeout(10)
 
