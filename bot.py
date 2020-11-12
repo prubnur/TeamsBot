@@ -24,7 +24,7 @@ def joinmeeting(url, duration, teamsid, teamspass):
 
     driver.set_page_load_timeout(10)
 
-    driver.get("https://teams.microsoft.com/_#/pre-join-calling/19:349461a7e103475a880deda07875ecdc@thread.tacv2")
+    driver.get("https://teams.microsoft.com/_#/pre-join-calling/19:349461a7e103475a880deda07875ecdc@thread.tacv2") # DON'T CHANGE THIS LINK
     time.sleep(2)
     driver.find_element_by_name("loginfmt").send_keys(teamsid)
     driver.find_element_by_name("loginfmt").send_keys(Keys.ENTER)
@@ -80,7 +80,11 @@ delta_t=y-x
 
 secs=delta_t.total_seconds()
 print(secs)
-link = "https://teams.microsoft.com/_#/scheduling-form/?eventId=AAMkADhjZmViZjBlLTM4ODItNGZlMC1hNzhlLWY4MjQ5NGU2ZDU5NwBGAAAAAADSzLP7gzGoS61RFTmCyIKdBwChiiU6v4zGQIu_XyT9XMq0AAAAAAENAAChiiU6v4zGQIu_XyT9XMq0AAAzOs4wAAA%3D&conversationId=19:349461a7e103475a880deda07875ecdc@thread.tacv2&opener=0&providerType=1&navCtx=channel"
+
+# Add the link to your meeting here
+link = "https://teams.microsoft.com/_#/scheduling-form/?eventId=AAMkADNiODUxOTlhLTQ4YmItNGIyYi05MDM0LTVjOGY5NDM2YTAwNgBGAAAAAACifGkwT19AQZ7GE2LvdHC5BwAXtDwmCk5PSaB7OKqdiU_VAAAAAAENAAAXtDwmCk5PSaB7OKqdiU_VAACLVI7EAAA%3D&conversationId=19:0dbac76ce6664198bef9f66a43e4ada8@thread.tacv2&opener=0&providerType=1&navCtx=channel"
+
+# Add the Duration of your meeting in seconds
 dur = 7200
 
 t = Timer(secs, joinmeeting(link, dur, userid, password))
